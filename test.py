@@ -1,12 +1,16 @@
+#All Imports
 from flask import Flask, render_template
 import random
 import json
 import requests
+
+#Initiating Flask App
 app = Flask(__name__)
 
-
+#creating route
 @app.route('/quotes')
 def index():
+	#Genarating random numbers
 	random_val = random.randint(1,1000)
 	link = ('https://thesimpsonsquoteapi.glitch.me/quotes?num=' + str(random_val))
 	l = requests.get(link)
