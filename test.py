@@ -17,7 +17,7 @@ def index():
 	v = json.loads(l.content)
 	val = (v[0]['quote'])
 	val_2 = (v[0]['character'])
-	return render_template('quotes.html', val=val, val_2=val_2)
+	return render_template('quotes.html', val=val, val_2=val_2, title='Flask Quotes')
 
 
 if __name__ == '__main__':
